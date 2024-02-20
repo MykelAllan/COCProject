@@ -42,3 +42,5 @@ app.get('/api/players/:playerTag', async (req, res) => {
 server.listen(PORT, () => {
     console.log(`backend server is running on port ${PORT}`)
 })
+
+module.exports = server;
