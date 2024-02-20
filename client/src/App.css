@@ -1,0 +1,81 @@
+/* client/src/App.css */
+
+body {
+  margin: 0; /* Remove default margin */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Take up full viewport height */
+  width: 100vw; /* Take up full viewport width */
+}
+
+.player-search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.coc-search-text {
+  color: #fff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.player-label {
+  color: #fff;
+}
+
+.player-data {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+
+.player-data ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.player-data li {
+  margin-bottom: 5px;
+}
+
+.player-data .profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
