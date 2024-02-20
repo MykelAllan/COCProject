@@ -8,7 +8,7 @@
     ],
     "functions": {
       "build": {
-        "runtime": "nodejs14.x",
+        "runtime": "nodejs18.x",
         "memory": 1024,
         "includeFiles": ["package.json", "package-lock.json"], 
         "environment": {
