@@ -7,7 +7,10 @@
     "node": "18.x"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "server": "node server.js",
+    "client": "cd client && npm start",
+    "deploy": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
