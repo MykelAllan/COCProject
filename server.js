@@ -17,18 +17,21 @@ app.get('/api/players/:playerTag', async (req, res) => {
     try {
         const { playerTag } = req.params;
         const apiToken = process.env.API_TOKEN;
+        const ipAddress = process.env.IP_ADDRESS;
+        const uri = `https://api.clashofclans.com/v1/players/%23${playerTag}`
         const axiosConfig = {
             headers: {
-                'Authorization': `Bearer ${apiToken}`
+                'Authorization': `Bearer ${apiToken}`,
+                'X-Forwarded-For': {ipAddress}
             }
         };
-        const uri = `https://api.clashofclans.com/v1/players/%23${playerTag}`
-        const response = await axios.get(uri, axiosConfig)
+
+        const response = await axios.get(uri, axiosConfig);
         res.json(response.data);
 
     } catch (error) {
         console.error('Error fetching player data', error)
-        res.status(500).json({error: 'Internal server error'})
+        res.status(500).json({ error: 'Internal server error' })
     }
 })
 
