@@ -1,15 +1,21 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "*.js",
-            "use": "@vercel/node"
-        }
+      {
+        "src": "server.js", 
+        "use": "@vercel/node"
+      }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/"
-        }
-    ]
-}
+    "functions": {
+      "build": {
+        "runtime": "nodejs14.x",
+        "memory": 1024,
+        "includeFiles": ["package.json", "package-lock.json"], 
+        "environment": {
+          "NODE_ENV": "production" 
+        },
+        "buildCommand": "npm install" 
+      }
+    }
+  }
+  
