@@ -2,15 +2,12 @@
   "name": "cocproject",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
-   
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
-    "client" : "cd client && npm start",
-    "test": "react-scripts test",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
