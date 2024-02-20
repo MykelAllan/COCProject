@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "engines": {
-    "node": "18.x"
-  },
+
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
-    "client": "cd client && npm start",
-    "deploy": "cd client && npm run build"
+    "client" : "cd ../client && npm start",
+    "test": "react-scripts test",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
