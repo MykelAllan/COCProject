@@ -4,13 +4,14 @@ const http = require('http');
 const cors = require('cors');
 const axios = require('axios');
 
-const PORT = process.env.PORT || 3001
-
 const app = express();
+
+app.use(cors())
+
+const PORT = process.env.PORT || 3001
 
 const server = http.createServer(app);
 
-app.use(cors())
 
 app.get('/api/data', (req, res) => {
     res.json({ message: ' Hello from the backend' })
