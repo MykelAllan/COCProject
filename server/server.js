@@ -1,11 +1,14 @@
 require('dotenv').config();
 const express = require('express');
+const http = require('http');
 const cors = require('cors');
 const axios = require('axios');
 
 const PORT = process.env.PORT || 3001
 
 const app = express();
+
+const server = http.createServer(app);
 
 app.use(cors())
 
@@ -35,6 +38,6 @@ app.get('/api/players/:playerTag', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`backend server is running on port ${PORT}`)
 })
