@@ -26,7 +26,7 @@ app.get('/api/players/:playerTag', async (req, res) => {
         const axiosConfig = {
             headers: {
                 'Authorization': `Bearer ${apiToken}`,
-                'X-Forwarded-For': ipAddress
+                // 'X-Forwarded-For': ipAddress
             }
         };
 
